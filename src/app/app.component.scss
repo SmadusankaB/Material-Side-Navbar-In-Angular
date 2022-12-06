@@ -1,0 +1,26 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .sidenav-container {
+    flex: 1;
+
+    .sidenav {
+      padding: 8px;
+      transition: width 200ms;
+    }
+
+    .main-container {
+      padding: 8px;
+    }
+  }
+}
+
+#sidenav-content {
+  transition: margin-left 200ms;
+}
