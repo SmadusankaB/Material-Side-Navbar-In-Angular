@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.10.
 
-Read the complete guide [here](https://technetzz.com/how-to-create-a-sidenav-menu-in-angular-material/)
+Read the complete guide [here](https://technetzz.com/how-to-create-a-responsive-angular-material-side-nav/)
 
 [![Demo video](https://img.youtube.com/vi/tPLCrZp6kOA/0.jpg)](https://www.youtube.com/watch?v=tPLCrZp6kOA)
 
