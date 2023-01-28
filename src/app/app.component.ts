@@ -16,7 +16,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   sideNavDefaultOpened = true;
   showFullMenu = true;
   isExpanded = true;
-  closedWidth = 75;
+  closedWidth = 90;
   openedWidth = 250;
   isMobile!: boolean;
   sideNavMode: 'side' | 'over' = 'side';
