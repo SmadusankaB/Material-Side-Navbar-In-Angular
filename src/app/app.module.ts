@@ -24,7 +24,6 @@ import { MaterialModule } from './material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FormsModule,
     MaterialModule,
   ],
   providers: [],
