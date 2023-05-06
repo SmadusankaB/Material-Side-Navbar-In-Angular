@@ -20,25 +20,34 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   openedWidth = 250;
   isMobile!: boolean;
   sideNavMode: 'side' | 'over' = 'side';
+  hasBackdrop: boolean = false;
   toolBarHeight = 64;
   private readonly mediaWatcher: Subscription;
   isDarkTheme: boolean = false;
   constructor(media: MediaObserver) {
     this.mediaWatcher = media.media$.subscribe((change: MediaChange) => {
 
+      // if in mobile view
       if (change.mqAlias === 'sm' || change.mqAlias === 'xs') {
+        // if side nav is already opened in mobile view
         if (this.sideNavDefaultOpened) {
+          // close side nav in mobile view 
           this.sideNavDefaultOpened = false;
           this.isExpanded = false;
         }
         this.isMobile = true;
         this.showFullMenu = true;
-      } else {
+        this.sideNavMode = 'over';
+        this.hasBackdrop = true;
+      } else { // if not in mobile view
         this.isMobile = false;
+        // open side nav
         this.sideNavDefaultOpened = true;
         this.sideNavMode = 'side';
+        this.hasBackdrop = false;
       }
 
+      // change tool bar height in mobile view
       if (change.mqAlias === 'xs') {
         this.toolBarHeight = 56;
       } else {
@@ -60,19 +69,10 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   onToolbarMenuToggle() {
     if (this.isMobile) {
-      if (!this.isExpanded) {
-        setTimeout(() => {
-          this.sideNav.toggle();
-        }, 150);
-      } else {
         this.sideNav.toggle();
-      }
-
     } else {
       if (!this.isExpanded) {
-        setTimeout(() => {
           this.showFullMenu = true;
-        }, 150);
       } else {
         this.showFullMenu = false;
       }

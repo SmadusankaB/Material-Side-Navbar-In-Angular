@@ -1,6 +1,6 @@
 <div class="layout-container font-regular" mat-app-background>
   <app-top-nav (sideNavToggled)="onToolbarMenuToggle()"></app-top-nav>
-  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="toolBarHeight" [hasBackdrop]="false">
+  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="toolBarHeight" [hasBackdrop]="hasBackdrop">
     <mat-sidenav #snav position="start" disableClose="true" role="navigation" class="sidenav mat-elevation-z10"
       [mode]="sideNavMode" [opened]="sideNavDefaultOpened"
       [ngStyle]="{'width.px': isExpanded ? openedWidth :  closedWidth}">
