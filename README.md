@@ -1,6 +1,6 @@
 # MaterialSideNavbarInAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.10.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
 Read the complete guide [here](https://technetzz.com/how-to-create-a-responsive-angular-material-side-nav/)
 
